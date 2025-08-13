@@ -1,0 +1,563 @@
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cocomat Pro Bold';
+  src: url('../assets/fonts/CocomatProBold/CocomatPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li, a, h1, h2, h3 {
+    text-decoration: none;
+    list-style: none;
+    color: rgb(58, 26, 13);
+    font-family: 'Poppins Bold' ;
+}
+
+p{
+    font-weight: bold;
+    font-family: 'Cocomat Pro Bold';
+    color: rgb(58, 26, 13);
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+}
+
+body{
+    background-color: #f6f6f6;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+nav{
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    & .nav-links-container{
+        display: flex;
+        gap: 2rem;
+        font-family: 'Cocomat Pro Bold';
+
+        & .nav-link {
+            border: 3px solid orange;
+            padding: 8px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    }
+}
+
+.logo{
+    margin-top: 15px;
+}
+
+.container {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.gr-orange{
+    background: linear-gradient(to right, #f86d68, #f4863e, #e3b055);
+}
+
+
+.container-interno {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    margin-left: 75px;
+    justify-content: center;
+
+
+    & h1,p,a{
+    color: white;
+    font-weight: bold;
+    }
+
+    & h1{
+        font-size: 65pt;
+        font-family: 'Poppins Bold';
+        text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.205);
+        width: 350px;
+    }
+
+    & p {
+        width: 450px;
+        font-family: 'Cocomat Pro Bold';
+        font-size: 20pt;
+        text-align: justify;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.150);
+    }
+
+}
+
+.container-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btn-link{
+    border: 3px solid white;
+    border-radius: 30px;
+    font-size: 16pt;
+    font-family: 'Cocomat Pro Bold';
+    padding: 0.5rem;
+    width: 200px;
+    text-align: center;
+
+}
+
+.title{
+    font-weight: bold;
+    font-family: 'Cocomat Pro Bold';
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%; 
+    text-align: center;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.150);
+}
+
+
+/* ------------------ DOAÇÃO ------------------ */
+
+
+.doacao-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.doacao-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    background: #fff4ec; /* base */
+    border-radius: 20px;
+    padding: 5px 10px;
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden; /* para cortar os elementos que passam */
+    box-shadow: 20px 4px 20px 4px rgba(0,0,0,0.10);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    width: 90%;
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Círculo sombra */
+.circle-bg {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(244,127,35,0.4) 0%, rgba(244,127,35,0) 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Círculo base */
+.circle-base {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    background: #ffdfc6;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* Gradiente da metade direita */
+.doacao-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #fff4ec 0%, #ffe5d6 100%);
+    z-index: 0;
+}
+
+/* Círculo */
+.circulo-wrapper {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.circulo-sombra {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(39, 194, 255, 0.25) 0%, rgba(244,127,35,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+    top: -20px;
+    left: -20px;
+}
+
+.circulo-base {
+    width: 240px;
+    height: 240px;
+    background: #ffdfc6;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Imagem */
+.imagem-doacao {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    margin-left: 60px;
+}
+
+.imagem-doacao img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0px 6px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Texto */
+.content-doacao{
+    max-width: 600px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;           
+    gap: 5px;
+    z-index: 3;
+    font-family: 'Cocomat Pro Bold';
+
+}
+
+.content-doacao h1{
+    font-size: 27px;
+   color: #363636;
+}
+
+.content-doacao h1 span{
+    color: #f47f23;
+}
+
+.content-doacao p {
+    margin: 15px 0;
+    margin-bottom: 40px;
+    font-size: 16.5px;
+    color: #333;
+    text-align: left;
+    
+}
+
+
+.btn-doar {
+    display: inline-block;
+    background: linear-gradient(90deg, #f86d68, #ff6a2c, #f47f23);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-doar:hover {
+    background: linear-gradient(0.3s, 90deg, #f47f23, #ff6a2c);
+}
+
+
+
+
+
+
+/*-------------------------- CARROSSEL ------------------ */
+
+
+
+/*Css do titulo dessa parte*/
+.titulo-instituicoes{
+    font-weight: bold;
+    font-family: 'Cocomat Pro Bold';
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+/*Css do container do carrossel*/
+.container-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px; 
+    gap: 1rem;
+}
+
+/*Css do que agrupa os elementos do carrossel*/
+.container-inst {
+    position: relative;
+    width: 700px;
+    height: 300px;
+    overflow: visible;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /*Faz a sombra que fica atrás do slide do carrossel (lado de fora)*/
+}
+
+/*Css do que vai construir a transição entre um slide para outro*/
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/*Css do slide do carrossel atual no momento*/
+.slide.on {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/*Css do da imagem da ong*/
+.slide-image {
+    flex: 1;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /*Faz a sombra que fica atrás da imagem dentro do carrossel*/
+    box-sizing: border-box;
+    padding-right: 10px;
+    background-size: cover;
+}
+
+/*Css da div que engloba o nome e descrição da ong*/
+.slide-text {
+    flex: 1;
+    text-align: center;
+}
+
+/*Css do nome da ong*/
+.slide-text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #92341B;
+    font-family: 'Cocomat Pro Bold';
+}
+
+/*Css da descrição da ong*/
+.slide-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #708372;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Cocomat Pro Bold';
+}
+
+/*Css dos botões*/
+#prev-button, #next-button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/*Css das imagens dos botões*/
+#prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+}
+/*Css para girar o botão de próximo*/
+#next-button{
+    transform: rotate(180deg);
+}
+
+/*Css para o simbolo da ong ficar na aprte superior*/
+.badge-img {
+    position: absolute;
+    top: -20px;    /* Faz a imagem subir acima da borda */
+    right: -20px;  /* Faz a imagem ultrapassar a lateral direita */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    z-index: 2;
+    box-shadow: 0px 0px 0px 3px #ededed; /*Deixa sólido e se expande na imagem inteira que fica por dentro do carrossel*/
+}
+
+.accordion {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.accordion-header {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.accordion-header span {
+    max-width: 100%;
+    white-space: nowrap;
+    font-family: 'Cocomat Pro Bold';
+    color: #622110;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-body {
+    color: #140a00;
+    font-size: 14px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity .3s;
+
+    & p{
+        font-family: 'Poppins Regular';
+    }
+}
+
+.accordion-body.active {
+    height: 100%;
+    opacity: 1;
+    padding: 30px 0px;
+}
+
+.arrow {
+    transition: transform .2s linear;
+}
+
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg);
+}
+
+footer{
+    width: 100%;
+}
+
+.footer-container{
+    background: #ededed;
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+    padding-bottom: 2rem;
+
+    & h4{
+        font-family: 'Poppins Bold';
+        color: #b35a2c;
+    }
+
+    & a{
+       color: #708372;
+       font-family: 'Poppins Regular';
+    }
+
+    & .footer-major-body{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    & .footer-minor-body{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.footer-license{
+    background: linear-gradient(to right, #e3b055, #f4863e, #f86d68);
+    padding: 8px;
+    
+    & p {
+        color: white;
+        font-family: 'Nunito', 'Poppins Regular', Arial;
+        font-size: 11pt;
+    }
+}
